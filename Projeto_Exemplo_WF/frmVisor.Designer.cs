@@ -68,6 +68,7 @@ namespace Projeto_Exemplo_WF
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = true;
             this.btn0.Click += new System.EventHandler(this.btn0_Click);
+            this.btn0.Enter += new System.EventHandler(this.btnIgual_Click);
             // 
             // btn4
             // 

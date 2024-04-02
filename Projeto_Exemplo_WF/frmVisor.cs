@@ -125,7 +125,14 @@ namespace Projeto_Exemplo_WF
                     Resultado = Valor * Convert.ToDecimal(visor.Text);
                     break;
                 case Operacao.Divisao:
-                    Resultado = Valor / Convert.ToDecimal(visor.Text);
+                    if (Convert.ToDecimal(visor.Text) > 0)
+                    {
+                        Resultado = Valor / Convert.ToDecimal(visor.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não é possivel dividir por 0!");
+                    }
                     break;
             }
             visor.Text = Convert.ToString(Resultado);
@@ -134,8 +141,8 @@ namespace Projeto_Exemplo_WF
 
         private void btnVir_Click(object sender, EventArgs e)
         {
-            if(!visor.Text.Contains(","))
-            visor.Text += ",";
+            if (!visor.Text.Contains(","))
+                visor.Text += ",";
         }
 
         private void btnLimpa_Click(object sender, EventArgs e)

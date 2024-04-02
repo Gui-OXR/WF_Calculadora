@@ -91,8 +91,14 @@ namespace Projeto_Exemplo_WF
                 b = double.Parse(txtSegundo.Text);
                 //Calculando
                 r = a / b;
-                //Mostrando o Resultado no Label
-                lblResultado.Text = r.ToString();
+                if (b > 0)
+                {
+                    lblResultado.Text = r.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Não é possivel dividir por 0!");
+                }
             }
             catch (FormatException)
             {
@@ -140,6 +146,37 @@ namespace Projeto_Exemplo_WF
         private void frmCalculos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnComp_Click(object sender, EventArgs e)
+        {
+            double a, b, r;
+            lblSinal.Text = ">";
+            //tente, caso encontre um excessão de formato, mostre uma mensagem
+            try
+            {
+                //Recolhendo valores das TextBox
+                a = double.Parse(txtPrimeiro.Text);
+                b = double.Parse(txtSegundo.Text);
+                //Calculando
+                if (a > b)
+                {
+                    lblResultado.Text = a.ToString()+" é maior";
+                }
+                else if(a<b)
+                {
+                    lblResultado.Text = b.ToString() + " é maior";
+                }
+                else
+                {
+                    lblResultado.Text = "São iguais";
+                }
+                //Mostrando o Resultado no Label
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Informe apenas números!");
+            }
         }
     }
 }

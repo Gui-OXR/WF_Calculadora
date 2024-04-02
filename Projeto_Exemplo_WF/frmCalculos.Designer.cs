@@ -42,6 +42,7 @@ namespace Projeto_Exemplo_WF
             this.lblSinal = new System.Windows.Forms.Label();
             this.txtPrimeiro = new System.Windows.Forms.TextBox();
             this.btnSomar = new System.Windows.Forms.Button();
+            this.btnComp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +83,7 @@ namespace Projeto_Exemplo_WF
             this.btnFechar.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btnFechar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFechar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFechar.Location = new System.Drawing.Point(491, 390);
+            this.btnFechar.Location = new System.Drawing.Point(556, 390);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(150, 40);
@@ -96,7 +97,7 @@ namespace Projeto_Exemplo_WF
             this.btnLimpar.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btnLimpar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLimpar.Location = new System.Drawing.Point(324, 390);
+            this.btnLimpar.Location = new System.Drawing.Point(398, 390);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(150, 40);
@@ -110,7 +111,7 @@ namespace Projeto_Exemplo_WF
             this.btnPotenciacao.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btnPotenciacao.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPotenciacao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPotenciacao.Location = new System.Drawing.Point(156, 390);
+            this.btnPotenciacao.Location = new System.Drawing.Point(82, 390);
             this.btnPotenciacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPotenciacao.Name = "btnPotenciacao";
             this.btnPotenciacao.Size = new System.Drawing.Size(150, 40);
@@ -124,7 +125,7 @@ namespace Projeto_Exemplo_WF
             this.btnDividir.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btnDividir.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDividir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDividir.Location = new System.Drawing.Point(569, 326);
+            this.btnDividir.Location = new System.Drawing.Point(556, 326);
             this.btnDividir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDividir.Name = "btnDividir";
             this.btnDividir.Size = new System.Drawing.Size(150, 40);
@@ -138,7 +139,7 @@ namespace Projeto_Exemplo_WF
             this.btnMultiplicar.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btnMultiplicar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiplicar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMultiplicar.Location = new System.Drawing.Point(406, 326);
+            this.btnMultiplicar.Location = new System.Drawing.Point(398, 326);
             this.btnMultiplicar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMultiplicar.Name = "btnMultiplicar";
             this.btnMultiplicar.Size = new System.Drawing.Size(150, 40);
@@ -152,7 +153,7 @@ namespace Projeto_Exemplo_WF
             this.btnSubtrair.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btnSubtrair.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubtrair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSubtrair.Location = new System.Drawing.Point(236, 326);
+            this.btnSubtrair.Location = new System.Drawing.Point(240, 326);
             this.btnSubtrair.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSubtrair.Name = "btnSubtrair";
             this.btnSubtrair.Size = new System.Drawing.Size(150, 40);
@@ -206,12 +207,27 @@ namespace Projeto_Exemplo_WF
             this.btnSomar.UseVisualStyleBackColor = false;
             this.btnSomar.Click += new System.EventHandler(this.btnSomar_Click);
             // 
+            // btnComp
+            // 
+            this.btnComp.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnComp.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnComp.Location = new System.Drawing.Point(240, 390);
+            this.btnComp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnComp.Name = "btnComp";
+            this.btnComp.Size = new System.Drawing.Size(150, 40);
+            this.btnComp.TabIndex = 26;
+            this.btnComp.Text = "&Comparar";
+            this.btnComp.UseVisualStyleBackColor = false;
+            this.btnComp.Click += new System.EventHandler(this.btnComp_Click);
+            // 
             // frmCalculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnComp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblResultado);
@@ -249,6 +265,7 @@ namespace Projeto_Exemplo_WF
         private System.Windows.Forms.Label lblSinal;
         private System.Windows.Forms.TextBox txtPrimeiro;
         private System.Windows.Forms.Button btnSomar;
+        private System.Windows.Forms.Button btnComp;
     }
 }
 
